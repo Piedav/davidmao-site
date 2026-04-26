@@ -50,10 +50,10 @@ export default function Home() {
 
   const dynamicBackground: CSSProperties = {
     background: `
-      radial-gradient(circle 50vw at ${x}% ${y}%, hsl(${hue-25}, 80%, 70%), transparent),
+      radial-gradient(circle 70vw at ${x}% ${y}%, hsl(${hue-25}, 80%, 70%), transparent),
       radial-gradient(circle 100vw at 50% 50%, hsl(${hue}, 80%, 70%), transparent),
-      radial-gradient(circle 50vw at ${x2}% ${y2}%, hsl(${hue + 25}, 80%, 70%), transparent),
-      #ffffff
+      radial-gradient(circle 70vw at ${x2}% ${y2}%, hsl(${hue + 25}, 80%, 70%), transparent),
+      hsl(${hue}, 80%, 70%)
     `,
   };
 
@@ -141,7 +141,7 @@ const styles: Record<string, CSSProperties> = {
     alignItems: "center",
     justifyContent: "center",
     gap: "clamp(0.5rem, 2vw, 1.5rem)",
-    marginTop: "clamp(0.5rem, 1.5vw, 1rem)",
+    marginTop: "clamp(1rem, 3vw, 2.5rem)",
   },
 
   photoFrame: {
