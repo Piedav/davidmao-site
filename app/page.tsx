@@ -62,7 +62,7 @@ export default function Home() {
       <div style={styles.container}>
         <div style={styles.card}>
           <h1 style={styles.title}>David Mao</h1>
-          <p style={styles.subtitle}>This site is still under construction.<br />For now, enjoy some photos of China! (^-^)</p>
+          <p style={styles.subtitle}>This site is still under construction.<br />For now, enjoy some photos of China! (⌒ー⌒)</p>
         </div>
         
         <div style={styles.carousel}>
