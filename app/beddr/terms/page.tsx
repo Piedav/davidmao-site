@@ -2,7 +2,7 @@ export default function TermsPage() {
   return (
     <main style={{ maxWidth: 800, margin: "0 auto", padding: 24, color: "#ffffff" }}>
       <h1>Beddr Terms of Service</h1>
-      <p><strong>Last updated:</strong> {new Date().toLocaleDateString()}</p>
+      <p><strong>Last updated: 4/29/2026</strong></p>
 
       <p>
         These Terms of Service ("Terms") govern your use of the Beddr mobile application
