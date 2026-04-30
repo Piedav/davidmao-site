@@ -23,16 +23,8 @@ export default function PrivacyPage() {
             "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
         }}
       >
-        {/* HEADER */}
         <div style={{ marginBottom: 28 }}>
-          <h1
-            style={{
-              fontSize: 32,
-              fontWeight: 700,
-              marginBottom: 6,
-              color: "#ffffff",
-            }}
-          >
+          <h1 style={{ fontSize: 32, fontWeight: 700, marginBottom: 6, color: "#ffffff" }}>
             Beddr Privacy Policy
           </h1>
 
@@ -41,59 +33,134 @@ export default function PrivacyPage() {
           </p>
         </div>
 
-        {/* INTRO */}
         <p style={{ marginBottom: 24 }}>
-          Beddr is operated by Helen Mao. This Privacy Policy explains how we
-          collect, use, and protect your information when you use the Beddr
-          mobile application.
+          Beddr is a mobile app operated by Helen Mao. This Privacy Policy
+          explains what information Beddr collects, how it is used, and how
+          users can control their data.
         </p>
 
-        {/* SECTION */}
         <Section title="Information We Collect">
+          <p>Beddr may collect the following information:</p>
           <BulletList
             items={[
-              "Name (from Google or Apple sign-in)",
-              "Email address",
-              "User activity data (locked time, competition stats)",
+              "Account information, such as your name, email address, and user ID when you sign in with Google or Apple.",
+              "Profile information, such as your display name.",
+              "App activity information, including lock-in session timestamps, locked minutes, weekly locked minutes, lifetime locked minutes, competition participation, points, rankings, and competition history.",
+              "Competition information, including competition names, rewards, join codes, start dates, end dates, participants, and leaderboard data.",
+              "Notification permission status if you choose to allow notifications.",
+            ]}
+          />
+          <p>
+            Beddr does not collect your precise location, contacts, photos,
+            microphone recordings, camera data, health data, or payment card
+            information.
+          </p>
+        </Section>
+
+        <Section title="How We Use Information">
+          <BulletList
+            items={[
+              "Create and manage your Beddr account.",
+              "Track your focused or locked-in time.",
+              "Display your progress, stats, competitions, points, and leaderboards.",
+              "Allow users to create, join, and participate in competitions.",
+              "Send local notifications related to lock-in sessions.",
+              "Maintain app security and prevent misuse of competition features.",
+              "Improve the reliability and functionality of the app.",
             ]}
           />
         </Section>
 
-        <Section title="How We Use Your Information">
-          <BulletList
-            items={[
-              "Create and manage your account",
-              "Track competition progress and leaderboards",
-              "Display your stats within the app",
-            ]}
-          />
+        <Section title="Sign-In Providers">
+          <p>
+            Beddr uses Google Sign-In and Apple Sign-In to authenticate users.
+            These services may provide Beddr with your name, email address, and
+            unique account identifier. Your use of Google or Apple sign-in is
+            also subject to the privacy policies of those providers.
+          </p>
         </Section>
 
         <Section title="Data Storage">
           <p>
-            Your data is stored securely using Firebase services. We take
-            reasonable measures to protect your information.
+            Beddr uses Firebase services, including Firebase Authentication and
+            Cloud Firestore, to store account, profile, progress, and competition
+            data.
+          </p>
+          <p>
+            Some account information may also be stored locally on your device so
+            that Beddr can keep you signed in and remember your onboarding
+            status.
           </p>
         </Section>
 
-        <Section title="Data Sharing">
+        <Section title="Notifications">
           <p>
-            We do not sell or share your personal data with third parties, except
-            as required to operate the app (e.g., Firebase authentication).
+            Beddr may ask for permission to send notifications. Notifications
+            are used to alert you when a lock-in session ends or when
+            app-related reminders are needed. You can disable notifications at
+            any time in your device settings.
+          </p>
+        </Section>
+
+        <Section title="Sharing of Information">
+          <p>Beddr does not sell your personal information.</p>
+          <p>
+            Some information, such as your display name, points, ranking, and
+            competition participation, may be visible to other users in the same
+            competition.
+          </p>
+          <p>
+            We may share information only when necessary to operate the app,
+            comply with legal obligations, protect the safety of users, or
+            prevent fraud or misuse.
+          </p>
+        </Section>
+
+        <Section title="Data Retention">
+          <p>
+            We keep your information for as long as your account is active or as
+            needed to provide Beddr’s features. If you delete your account, Beddr
+            will delete your profile data and remove your user entry from
+            competitions, unless retention is required by law or necessary for
+            legitimate security purposes.
           </p>
         </Section>
 
         <Section title="Account Deletion">
           <p>
-            You can delete your account at any time from the Profile screen in
-            the app. This will permanently remove your account and associated
-            data.
+            You can delete your account inside the Beddr app from the Profile
+            screen. Deleting your account removes your Beddr profile, stored
+            progress data, and authentication account. This action cannot be
+            undone.
+          </p>
+        </Section>
+
+        <Section title="Children’s Privacy">
+          <p>
+            Beddr is not intended for children under 13. We do not knowingly
+            collect personal information from children under 13.
+          </p>
+        </Section>
+
+        <Section title="Security">
+          <p>
+            We use reasonable technical measures to protect user information.
+            However, no method of electronic storage or transmission is
+            completely secure.
+          </p>
+        </Section>
+
+        <Section title="Changes to This Policy">
+          <p>
+            We may update this Privacy Policy from time to time. If we make
+            material changes, we will update the “Last updated” date above.
           </p>
         </Section>
 
         <Section title="Contact">
           <p>
-            If you have questions, contact:
+            If you have questions about this Privacy Policy or want help with
+            your data, contact us at:
             <br />
             <span style={{ color: "#cc7bdb", fontWeight: 600 }}>
               beddr.team@gmail.com
@@ -104,8 +171,6 @@ export default function PrivacyPage() {
     </main>
   );
 }
-
-/* ---------- Reusable Components ---------- */
 
 function Section({
   title,
