@@ -100,7 +100,7 @@ export default function TermsPage() {
             If you have questions, contact:
             <br />
             <span style={{ color: "#cc7bdb", fontWeight: 600 }}>
-              beddrteam@gmail.com
+              beddr.team@gmail.com
             </span>
           </p>
         </Section>
