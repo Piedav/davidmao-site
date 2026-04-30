@@ -1,6 +1,6 @@
 export default function TermsPage() {
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: 24, color: "#111" }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: 24, color: "#ffffff" }}>
       <h1>Beddr Terms of Service</h1>
       <p><strong>Last updated:</strong> {new Date().toLocaleDateString()}</p>
 
