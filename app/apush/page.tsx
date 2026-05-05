@@ -198,57 +198,60 @@ export default function APUSHTimelinePracticePage() {
   return (
     <main className="page">
         <Header />
-      <h1>APUSH Timeline Test Practice</h1>
+        <div className="content">
+            <div style={{ textAlign: "center" }}>
+                <h1>APUSH Timeline Test Practice</h1>
 
-      <p className="lead">
-        made by David Mao 8/27/2025
-        <br />
-        Note: question order is randomized when the page is refreshed.
-      </p>
+                <p className="lead">
+                    made by David Mao 8/27/2025
+                    <br />
+                    Note: question order is randomized when the page is refreshed.
+                </p>
+            </div>
+            <div className="card">
+                {shuffledSections.map((section) => {
+                const labels = getLabels(section.correctOrder.length);
 
-      <div className="card">
-        {shuffledSections.map((section) => {
-          const labels = getLabels(section.correctOrder.length);
+                return (
+                    <section className="timelineSection" key={section.id}>
+                    <img src={section.image} alt={section.alt} className="timeline" />
 
-          return (
-            <section className="timelineSection" key={section.id}>
-              <img src={section.image} alt={section.alt} className="timeline" />
+                    <div className="choices">
+                        {section.shuffledChoices.map((choice, index) => (
+                        <p key={choice}>
+                            {index + 1}. {choice}
+                        </p>
+                        ))}
+                    </div>
 
-              <div className="choices">
-                {section.shuffledChoices.map((choice, index) => (
-                  <p key={choice}>
-                    {index + 1}. {choice}
-                  </p>
-                ))}
-              </div>
+                    <div className="answerGrid">
+                        {labels.map((label) => (
+                        <label key={label} className="answerRow">
+                            <span>{label}</span>
+                            <input
+                            value={answers[answerKey(section.id, label)] ?? ""}
+                            onChange={(e) =>
+                                updateAnswer(section.id, label, e.target.value)
+                            }
+                            placeholder={`1 to ${section.correctOrder.length}`}
+                            inputMode="numeric"
+                            />
+                        </label>
+                        ))}
+                    </div>
 
-              <div className="answerGrid">
-                {labels.map((label) => (
-                  <label key={label} className="answerRow">
-                    <span>{label}</span>
-                    <input
-                      value={answers[answerKey(section.id, label)] ?? ""}
-                      onChange={(e) =>
-                        updateAnswer(section.id, label, e.target.value)
-                      }
-                      placeholder={`1 to ${section.correctOrder.length}`}
-                      inputMode="numeric"
-                    />
-                  </label>
-                ))}
-              </div>
+                    <button onClick={() => checkSection(section)}>
+                        Check Answer
+                    </button>
 
-              <button onClick={() => checkSection(section)}>
-                Check Answer
-              </button>
-
-              <div className="output">
-                {results[section.id] ?? "Output will appear here…"}
-              </div>
-            </section>
-          );
-        })}
-      </div>
+                    <div className="output">
+                        {results[section.id] ?? "Output will appear here…"}
+                    </div>
+                    </section>
+                );
+                })}
+            </div>
+        </div>
 
       <style jsx>{`
         .page {
@@ -259,8 +262,10 @@ export default function APUSHTimelinePracticePage() {
         }
         .content {
             max-width: 760px;
+            width: 100%;
             margin: 0 auto;
             padding: 2rem 1rem 3rem;
+
         }
         h1 {
           font-size: clamp(1.8rem, 3vw, 2.4rem);

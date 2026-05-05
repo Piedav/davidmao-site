@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function SupportPage() {
   return (
     <main
@@ -9,6 +11,32 @@ export default function SupportPage() {
         justifyContent: "center",
       }}
     >
+      <Link
+        href="/beddr"
+        aria-label="Back to Beddr"
+        style={{
+          position: "fixed",
+          top: 20,
+          left: 20,
+          width: 130,
+          height: 44,
+          borderRadius: 18,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textDecoration: "none",
+          color: "#ffffff",
+          fontSize: 20,
+          fontWeight: 800,
+          backgroundColor: "rgba(255, 255, 255, 0.12)",
+          border: "1px solid rgba(255, 255, 255, 0.22)",
+          boxShadow: "0 8px 24px rgba(0, 0, 0, 0.35)",
+          backdropFilter: "blur(12px)",
+          zIndex: 50,
+        }}
+      >
+        ← Home
+      </Link>
       <div
         style={{
           maxWidth: 820,
