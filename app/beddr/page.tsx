@@ -30,7 +30,7 @@ export default function BeddrPage() {
         }}
       >
         <img
-          src="/beddrlogo.png"
+          src="/beddrLogo.png"
           alt="BeddrLogo"
           style={{
             width: 160,
