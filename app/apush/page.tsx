@@ -252,13 +252,16 @@ export default function APUSHTimelinePracticePage() {
 
       <style jsx>{`
         .page {
-          font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-            sans-serif;
-          max-width: 760px;
-          margin: 2rem auto;
-          padding: 0 1rem 3rem;
+            min-height: 100vh;
+            width: 100%;
+            margin: 0;
+            padding: 0;
         }
-
+        .content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2rem 1rem 3rem;
+        }
         h1 {
           font-size: clamp(1.8rem, 3vw, 2.4rem);
           margin-bottom: 0.25rem;

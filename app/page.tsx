@@ -97,20 +97,17 @@ const styles: Record<string, CSSProperties> = {
   
   main: {
     minHeight: "100vh",
-    //display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
     color: "white",
-    padding: "clamp(0.5rem, 1vw, 0.5rem)",
+    padding: 0,
+    margin: 0,
     overflow: "hidden",
   },
 
   container: {
     textAlign: "center",
-    width: "100vw",
+    width: "100%",
     padding: "clamp(0.75rem, 2vw, 2rem)",
     borderRadius: "clamp(1.5rem, 4vw, 3rem)",
-
     transformOrigin: "center center",
   },
 

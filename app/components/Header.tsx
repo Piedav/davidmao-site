@@ -1,29 +1,40 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { CSSProperties } from "react";
 
-
 export default function Header() {
+  const pathname = usePathname();
+
+  const getTabStyle = (href: string): CSSProperties => {
+    const isActive =
+      href === "/"
+        ? pathname === "/"
+        : pathname.startsWith(href);
+
+    return {
+      ...styles.tab,
+      ...(isActive ? styles.activeTab : {}),
+    };
+  };
+
   return (
     <header style={styles.header}>
-        <img
-        src="/maologo.png"
-        alt="dmao"
-        style={{
-        width: 40,
-        height: 40,
-        objectFit: "contain",
-        }}
-    />
+      <Link href="/" style={styles.logo}>
+        <img src="/maologo.png" alt="dmao" style={styles.logoImage} />
+      </Link>
 
       <nav style={styles.tabs}>
-        <Link href="/" style={styles.tab}>
+        <Link href="/" style={getTabStyle("/")}>
           Home
         </Link>
-        <Link href="/beddr" style={styles.tab}>
+
+        <Link href="/beddr" style={getTabStyle("/beddr")}>
           Beddr
         </Link>
 
-        <Link href="/apush" style={styles.tab}>
+        <Link href="/apush" style={getTabStyle("/apush")}>
           APUSH Study Tools
         </Link>
       </nav>
@@ -44,13 +55,20 @@ const styles: Record<string, CSSProperties> = {
     background: "rgba(255, 255, 255, 0.85)",
     backdropFilter: "blur(12px)",
     borderBottom: "1px solid rgba(0, 0, 0, 0.08)",
+    fontFamily:
+      "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
   },
 
   logo: {
+    display: "flex",
+    alignItems: "center",
     textDecoration: "none",
-    fontSize: 22,
-    fontWeight: 800,
-    color: "#7c3aed",
+  },
+
+  logoImage: {
+    width: 40,
+    height: 40,
+    objectFit: "contain",
   },
 
   tabs: {
@@ -61,9 +79,13 @@ const styles: Record<string, CSSProperties> = {
 
   tab: {
     textDecoration: "none",
-    color: "#374151",
+    color: "#6b7280",
     fontSize: 15,
     fontWeight: 600,
   },
 
-}
+  activeTab: {
+    color: "#111827",
+    fontWeight: 800,
+  },
+};
