@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
+import Header from "./components/Header";
 
 const photos = [
   "/china/photo1.webp",
@@ -20,6 +21,8 @@ const photos = [
   "/china/photo14.webp",
   "/china/photo15.webp",
 ];
+
+
 
 export default function Home() {
   //const [hue, setHue] = useState(20);
@@ -59,6 +62,8 @@ export default function Home() {
 
   return (
     <main style={{ ...styles.main, ...dynamicBackground }}>
+      <Header />
+
       <div style={styles.container}>
         <div style={styles.card}>
           <h1 style={styles.title}>David Mao</h1>
@@ -89,9 +94,10 @@ export default function Home() {
 }
 
 const styles: Record<string, CSSProperties> = {
+  
   main: {
     minHeight: "100vh",
-    display: "flex",
+    //display: "flex",
     alignItems: "center",
     justifyContent: "center",
     color: "white",
@@ -101,7 +107,7 @@ const styles: Record<string, CSSProperties> = {
 
   container: {
     textAlign: "center",
-    width: "min(96vw, 1300px)",
+    width: "100vw",
     padding: "clamp(0.75rem, 2vw, 2rem)",
     borderRadius: "clamp(1.5rem, 4vw, 3rem)",
 

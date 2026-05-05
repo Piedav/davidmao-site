@@ -1,5 +1,5 @@
 "use client";
-
+import Header from "../components/Header";
 import { useEffect, useState } from "react";
 
 type Section = {
@@ -197,6 +197,7 @@ export default function APUSHTimelinePracticePage() {
 
   return (
     <main className="page">
+        <Header />
       <h1>APUSH Timeline Test Practice</h1>
 
       <p className="lead">

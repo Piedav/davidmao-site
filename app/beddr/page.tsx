@@ -1,3 +1,5 @@
+import Header from "../components/Header";
+
 export default function BeddrPage() {
   return (
     <main
@@ -14,6 +16,7 @@ export default function BeddrPage() {
           "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
       }}
     >
+      <Header />
       <style>
         {`
           @keyframes gradientShift {
@@ -41,8 +44,13 @@ export default function BeddrPage() {
         `}
       </style>
     <img
-    src={"beddrLogo.png"}
-    alt={`Beddr Logo`}
+      src="/beddrlogo.png"
+      alt="BeddrLogo"
+      style={{
+        width: 40,
+        height: 40,
+        objectFit: "contain",
+      }}
     />
       <h1
         style={{
