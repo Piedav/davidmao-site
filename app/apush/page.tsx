@@ -203,7 +203,7 @@ export default function APUSHTimelinePracticePage() {
                 <h1>APUSH Timeline Test Practice</h1>
 
                 <p className="lead">
-                    made by David Mao 8/27/2025 (Shoutout Yuvaan cause he PM'ed me)
+                    made by David Mao 8/27/2025 (Shoutout Yuvaan and Arhan cause they PM'ed me)
                     <br />
                     Note: question order is randomized when the page is refreshed.
                 </p>
