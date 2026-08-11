@@ -57,7 +57,7 @@ export default function SupportPage() {
           </h1>
 
           <p style={{ color: "#A0A0B8", fontSize: 14 }}>
-            Last updated: April 29, 2026
+            Last updated: August 11, 2026
           </p>
         </div>
 
@@ -82,8 +82,8 @@ export default function SupportPage() {
               "Trouble signing in with Google or Apple.",
               "A competition code is not working.",
               "Your locked time or competition points are not updating.",
+              "A friend request, search result, or lock-in invite isn't showing up.",
               "You want to delete your account or remove your data.",
-              "Notifications are not appearing as expected.",
             ]}
           />
         </Section>
@@ -105,11 +105,16 @@ export default function SupportPage() {
           </p>
         </Section>
 
-        <Section title="Notifications">
+        <Section title="Friends &amp; Lock-In Invites">
           <p>
-            Beddr may use notifications to alert you when a lock-in session ends.
-            If notifications are not appearing, check that notifications are
-            enabled for Beddr in your device settings.
+            If you can&rsquo;t find a friend in search, make sure they have
+            enabled the &quot;Discoverable in search&quot; setting in their
+            own Profile &gt; Friends &amp; Privacy. Lock-in invites appear as
+            a banner inside the app in real time, but only while the
+            recipient has Beddr open — Beddr does not currently send push or
+            device notifications for invites, so an invite won&rsquo;t
+            appear if the recipient's app is closed or backgrounded at the
+            time it's sent.
           </p>
         </Section>
 
@@ -117,8 +122,8 @@ export default function SupportPage() {
           <p>
             You can delete your account inside the Beddr app from the Profile
             screen. Deleting your account removes your Beddr profile, stored
-            progress data, and authentication account. This action cannot be
-            undone.
+            progress data, friend code, friend requests, friendships, and
+            authentication account. This action cannot be undone.
           </p>
         </Section>
 
