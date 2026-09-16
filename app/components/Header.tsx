@@ -37,6 +37,13 @@ export default function Header() {
         <Link href="/apush" style={getTabStyle("/apush")}>
           APUSH Study Tools
         </Link>
+
+        <Link
+          href="/docs-tab-memory"
+          style={getTabStyle("/docs-tab-memory")}
+        >
+          Docs Tab Collapsed Memory
+        </Link>
       </nav>
     </header>
   );
