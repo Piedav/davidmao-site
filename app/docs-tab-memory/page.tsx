@@ -67,7 +67,15 @@ export default function DocsTabMemoryPage() {
         </p>
 
         <div style={styles.buttonRow}>
-          <span style={styles.pill}>Coming soon to the Chrome Web Store</span>
+          <a
+            href="https://chromewebstore.google.com/detail/nfpknepolbaebjpkoghppialgjgjapeo?utm_source=item-share-cb"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={styles.button}
+          >
+            Download on the Chrome Web Store
+          </a>
+          
 
           <Link href="/docs-tab-memory/privacy" style={styles.button}>
             Privacy Policy
