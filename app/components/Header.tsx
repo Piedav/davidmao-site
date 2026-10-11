@@ -30,9 +30,9 @@ export default function Header() {
           Home
         </Link>
 
-        <Link href="/beddr" style={getTabStyle("/beddr")}>
+        <a href="https://beddr.app" style={getTabStyle("/beddr")}>
           Beddr
-        </Link>
+        </a>
 
         <Link href="/apush" style={getTabStyle("/apush")}>
           APUSH Study Tools
