@@ -91,6 +91,8 @@ export default function MonkfulPrivacyPage() {
             items={[
               "The web address of the tab you are currently looking at. The extension compares the site's domain (for example youtube.com) with your list of distracting sites to decide whether you are focused or distracted. The address is checked on the spot and is never saved or sent anywhere.",
               "Whether you are active. Chrome's idle feature tells the extension only whether you are active, have been away from the keyboard for 5 minutes, or have locked your screen, so that focus time pauses while you are away. It never learns what you are doing.",
+              "The position of your mouse pointer on the page, which the extension uses only to make the grass around the monk sway when you brush past it. The position is used instantly and is never saved or sent anywhere.",
+              "Your clicks and drags on the monk himself, used to move him around the screen or show his speech bubble. Clicks anywhere else on the page are ignored.",
             ]}
           />
         </Section>
