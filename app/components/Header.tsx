@@ -44,6 +44,10 @@ export default function Header() {
         >
           Docs Tab Collapsed Memory
         </Link>
+
+        <Link href="/monkful" style={getTabStyle("/monkful")}>
+          Monkful
+        </Link>
       </nav>
     </header>
   );
