@@ -70,7 +70,14 @@ export default function MonkfulPage() {
         </p>
 
         <div style={styles.buttonRow}>
-          <span style={styles.pill}>Coming soon to the Chrome Web Store</span>
+          <a
+            href="https://chromewebstore.google.com/detail/monkful/nbgbempheiiddomkjhjofcncgcpcbbof"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={styles.button}
+          >
+            Download on the Chrome Web Store
+          </a>
 
           <Link href="/monkful/privacy" style={styles.button}>
             Privacy Policy
